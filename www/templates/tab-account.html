@@ -1,10 +1,260 @@
-<ion-view view-title="Account">
-  <ion-content>
-    <p>搜券呀</p>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
-  </ion-content>
-</ion-view>
+<style>
+
+  #users{
+    width: 90%;
+    border-radius: 30px;
+    display: inline-block;
+    font-size: 18px;
+    color:black;
+  }
+  #rows{
+    height:50px;
+    line-height:35px;
+  }
+  #rows>div,#rows>div>a{
+    vertical-align: top;
+
+  }
+  #shows{
+    width: 100%;
+    position: fixed;
+    background:rgba(0,0,0,.6);
+    color: white;
+    z-index:99;
+    height:100%;
+  }
+  #shows>div{
+    background-color: white;
+  }
+
+#banner{
+  height:300px;
+}
+  #bf>.col>div{
+    width:54px;
+    height:54px;
+    line-height: 54px;
+    border-radius: 54px;
+    background-color: white;
+    text-align: center;
+  }
+  #bf>.col>div>img{
+    vertical-align: middle;
+    width:36px;
+    height:36px;
+  }
+  .shop{
+    background-color: #f7f7f7;
+    padding-top:20px;
+  }
+  .shop>.shops{
+    background-color: pink;
+    padding:5px;
+    height:140px;
+     margin-bottom: 25px;
+  }
+  .shops>img{
+    width:135px;
+    height:140px;
+  }
+   .div-center,.div-right{
+     display: inline-block;
+     border: 1px solid red;
+     vertical-align: top;
+   }
+  .div-center{
+    margin:0 30px;
+    height:135px;
+    padding-top: 5px;
+    width:210px;
+  }
+
+  .div-right{
+    float: right;
+    padding: 25px 0px 0 0;
+    width:100px;
+  }
+  .div-title{
+    line-height: 34px;
+    font-size:20px;
+  }
+  .price{
+    color: #ff405d;
+    font-size: 24px;
+  }
+  .last-price{
+   text-decoration: line-through;
+  }
+  .special{
+    margin-top:20px;
+  }
+  .money{
+    font-size: 16px;
+    /*margin-bottom: 15px;*/
+  }
+  .money>span{
+    font-size: 28px;
+  }
+  .lingquan{
+    margin-top: 20px;
+    color: #db687c;
+    font-size: 20px;
+  }
+</style>
+
+<ion-header-bar class="bar-assertive">
+  <div class="buttons">
+    <button class="button button-icon icon ion-navicon-round"></button>
+  </div>
+  <h1 class="title">
+    <input type="text" placeholder="输入关键词或商品标题搜索" id="users">
+  </h1>
+  <div class="buttons">
+    <button class="button button-icon icon ion-search" ></button>
+  </div>
+</ion-header-bar>
+<ion-content>
+  <div class="row" id="rows">
+    <div class="col col-10">
+      <a href="#">全部</a>
+    </div>
+    <div class="col col-11">
+      <a href="#">女装</a>
+    </div>
+    <div class="col col-11">
+      <a href="#">男装</a>
+    </div>
+    <div class="col col-11">
+      <a href="#">鞋子</a>
+    </div>
+    <div class="col col-11">
+      <a href="#">箱包</a>
+    </div>
+    <div class="col col-11">
+      <a href="#">母婴</a>
+    </div>
+    <div class="col col-11">
+      <a href="#">内衣</a>
+    </div>
+    <div class="col col-11">
+      <a href="#">美妆</a>
+    </div>
+    <div class="col col-5">
+      <span class="icon " ng-click="shows()" ng-class="flag==true? 'ion-chevron-down':'ion-chevron-up'" ng-model="flag"></span>
+    </div>
+  </div>
+<div  id="shows" ng-show="flag">
+  <div class="row">
+    <div class="col col-25">
+      <a href="#">女装</a>
+    </div>
+    <div class="col col-25">
+      <a href="#">男装</a>
+    </div>
+    <div class="col col-25">
+      <a href="#">鞋子</a>
+    </div>
+    <div class="col col-25">
+      <a href="#">箱包</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-25">
+      <a href="#">母婴</a>
+    </div>
+    <div class="col col-25">
+      <a href="#">内衣</a>
+    </div>
+    <div class="col col-25">
+      <a href="#">美妆</a>
+    </div>
+    <div class="col col-25">
+      <a href="#">配饰</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-25">
+      <a href="#">居家</a>
+    </div>
+    <div class="col col-25">
+      <a href="#">文体</a>
+    </div>
+    <div class="col col-25">
+      <a href="#">数码</a>
+    </div>
+    <div class="col col-25">
+      <a href="#">电器</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-25">
+      <a href="#">美食</a>
+    </div>
+    <div class="col col-25">
+      <a href="#">其他</a>
+    </div>
+
+  </div>
+</div>
+
+  <!--banner-->
+<div id="banner">
+
+</div>
+<!--9.9-->
+<div class="row" id="bf">
+    <div class="col col-25">
+      <div style="background-color:#fbc426;">
+        <img src="../img/bf1.png" alt="">
+      </div>
+      <p>9.9包邮</p>
+    </div>
+  <div class="col col-25">
+    <div style="background-color:#3edcb4;">
+      <img src="../img/bf2.png" alt="">
+    </div>
+    <p>20元封顶</p>
+  </div>
+  <div class="col col-25">
+    <div style="background-color:#f38648;">
+      <img src="../img/bf3.png" alt="">
+    </div>
+    <p>今日疯抢榜</p>
+  </div>
+  <div class="col col-25">
+    <div style="background-color:#5fd0ff;">
+      <img src="../img/bf4.png" alt="">
+    </div>
+    <p>仅限今日</p>
+  </div>
+
+</div>
+<div class="shop">
+     <div class="shops">
+       <img src="../img/bf4.png" alt="">
+       <div class="div-center">
+         <p class="div-title">
+            加绒打底裤女士外穿长裤2017
+         </p>
+         <span class="price">
+           ¥59.0
+         </span>
+         <span class="last-price">
+           ¥79.0
+         </span>
+         <p class="special">新品特惠</p>
+         <!--<p>已抢购<span>163</span>件 </p>-->
+       </div>
+       <div class="div-right">
+         <p class="money">¥<span>20</span></p>
+         <p>优惠券</p>
+         <p class="lingquan">领券购买</p>
+       </div>
+     </div>
+</div>
+
+
+
+
+</ion-content>
+
