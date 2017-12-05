@@ -40,8 +40,19 @@ angular.module('starter.controllers', [])
   $scope.num=10;
   $scope.get=function () {
      ser.getdata($scope.num).success(function (data) {
-       console.log(data);
+       $scope.data=data;
      });
   };
   $scope.get();
-});
+  $scope.today=function () {
+    ser.gettoday(10).success(function (data) {
+      $scope.data=data;
+    });
+  }
+}).directive('linkShop',['$location', function(lc) {
+  return function(scope, elm, attrs) {
+    scope.$on('click',elm,function (event) {
+      console.log("*****************");
+    });
+  };
+}]);
