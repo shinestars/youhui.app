@@ -1,0 +1,13 @@
+MyPDO::getInstance(
+        dbhost:'localhost',
+        dbname:'soquan',
+        dbUser:'root',
+        dbPassword:'',
+        dbCharset:'utf8'
+        );
+
+接口文档没啥好写的
+getdata 获取 0 ~ $size 条数据
+getdatabyid 获取 id 为 xx 的商品  注:本次数据库双ID 都不存在重复
+getdatadim  模糊查询  传参方式有问题 正在改进
+
