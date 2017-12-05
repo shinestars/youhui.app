@@ -29,13 +29,19 @@ angular.module('starter.controllers', [])
   .controller('JingxuanCtrl', function($scope) {})
 
   //搜券
-.controller('AccountCtrl', function($scope,$ionicBackdrop) {
+.controller('AccountCtrl', function($scope,ser) {
   $scope.flag=false;
   $scope.shows=function () {
-    // $ionicBackdrop.retain();
     return $scope.flag=!$scope.flag;
   };
   $scope.settings = {
     enableFriends: true
   };
+  $scope.num=10;
+  $scope.get=function () {
+     ser.getdata($scope.num).success(function (data) {
+       console.log(data);
+     });
+  };
+  $scope.get();
 });

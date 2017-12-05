@@ -47,4 +47,11 @@ angular.module('starter.services', [])
       return null;
     }
   };
-});
+})
+  .factory('ser',function ($http) {
+    return {
+      getdata:function (size) {
+        return $http.get("../data/getdata.php?size="+size);
+      }
+    }
+  });
