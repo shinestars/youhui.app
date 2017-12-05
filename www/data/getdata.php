@@ -12,7 +12,6 @@ $sql = "select * from soquan LIMIT 0,$size";
 $result = $db->query($sql);
 
 $row = json_encode($result);
-
 echo($row);
 
 

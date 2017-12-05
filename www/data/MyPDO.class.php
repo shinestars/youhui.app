@@ -5,6 +5,7 @@
  * Date: 17/12/4
  * Time: 下午4:39
  */
+
 class MyPDO{
     protected static $_instance = null;
     protected $dbName = '';

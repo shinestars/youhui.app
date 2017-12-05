@@ -6,6 +6,7 @@ MyPDO::getInstance(
         dbCharset:'utf8'
         );
 
+
 接口文档没啥好写的
 getdata 获取 0 ~ $size 条数据
 getdatabyid 获取 id 为 xx 的商品  注:本次数据库双ID 都不存在重复
