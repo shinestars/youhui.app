@@ -1,0 +1,226 @@
+.main {
+  width:545px;
+}
+.xiong {
+  width: 100%;
+  height:100%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+.top-a {
+  width: 36px;
+  height: 36px;
+  background-color: rgb(85,85,85);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  float: left;
+  z-index: 1000;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.top-b {
+  width: 36px;
+  height: 36px;
+  background-color: rgb(85,85,85);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  float: right;
+  z-index: 1000;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.top-a img,.top-b img {
+  width: 16px;
+  height: 16px;
+}
+.prices {
+  width: 185px;
+  display: inline-block;
+  padding: 10px;
+  border-right:1px solid rgb(229,229,229);
+  overflow: hidden;
+}
+.prices span:nth-child(1) {
+  margin-left: 40px;
+  margin-right: 10px;
+  color: rgb(129,129,129);
+  font-size:20px;
+}
+.prices span:nth-child(2) {
+  color: rgb(243,70,81);
+  font-size:26px;
+}
+.news {
+  font-size:18px;
+  display: inline-block;
+  color: rgb(174,174,174);
+  position: relative;
+  bottom: 5px;
+}
+.news span:nth-child(1) {
+  line-height: 30px;
+  text-decoration: line-through;
+}
+.news span:nth-child(3) {
+  line-height: 30px;
+  /*position: relative;*/
+  /*bottom: 8px;*/
+}
+.cool {
+  width:380px;
+  margin: 0 auto;
+}
+.taidi {
+  text-align: center;
+  font-size: 18px;
+  border-bottom:2px dashed rgb(236,236,236);
+}
+.xing {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  vertical-align: top;
+}
+.liyou {
+  font-size: 20px;
+  color: rgb(103,103,103);
+  font-weight:bolder;
+  margin-bottom: 10px;
+}
+.shushi {
+  font-size: 20px;
+  color: rgb(103,103,103);
+  margin-top: 10px;
+  margin-left: 8px;
+  text-align: justify;
+}
+.down img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.dingwei {
+  width:100%;
+  position: absolute;
+  bottom: 0px;
+  z-index:1000;
+}
+.down {
+  display: inline-block;
+  width:33%;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #ffffff;
+}
+.down a {
+  color: #ffffff;
+}
+.downa a {
+  color: rgb(113,113,113);
+}
+.downb {
+  background-color: rgb(243,90,99);
+  color: #ffffff;
+}
+.downc {
+  width:34%;
+  background-color: rgb(242,50,65);
+  color: #ffffff;
+}
+.tupian {
+  margin-left:8px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight:bolder;
+  color: rgb(96,96,96);
+}
+.tupian img {
+  width:32px;
+  height:32px;
+  position: relative;
+  top: 8px;
+
+}
+.zhankai {
+  color: rgb(246,74,91);
+}
+.tu {
+  float: right;
+  margin-right: 8px;
+}
+.like img {
+  width:26px;
+  height:26px;
+  margin-left: 4px;
+  position: relative;
+  top: 6px;
+}
+.like {
+  line-height: 50px;
+  font-size: 20px;
+  color: rgb(96,96,96);
+  font-weight:bolder;
+  margin-left: 8px;
+}
+.like .cai {
+  padding-right: 150px;
+}
+.like .cha {
+  float: right;
+  margin-right: 8px;
+}
+.none {
+  height: 15px;
+  background-color: rgb(247,247,247);
+}
+.more img {
+  width: 100%;
+  height:100%;
+}
+.more {
+  display: inline-block;
+  width: 46%;
+  font-size: 14px;
+  position: relative;
+  margin-left: 2%;
+  margin-bottom: 3%;
+}
+.more a {
+  color: rgb(134,134,134);
+}
+.title-word{
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  overflow: hidden;
+}
+.more .money {
+  color: rgb(222,82,106);
+}
+.more .liang {
+  color: rgb(181,181,181);
+  font-size: 12px;
+  float: right;
+  /*margin-right: 10px;*/
+}
+.more .ding {
+  position: absolute;
+  top:0;
+  right:0;
+  /*padding:3px 18px;*/
+  background-color: rgb(246,69,81);
+  color: #ffffff;
+}
+.bbtm {
+  height: 50px;
+}
