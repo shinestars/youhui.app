@@ -1,14 +1,63 @@
-<!--
-  This template loads for the 'tab.friend-detail' state (app.js)
-  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
-  The FriendsCtrl pulls data from the Friends service (service.js)
-  The Friends service returns an array of friend data
--->
-<ion-view view-title="{{chat.name}}">
-  <ion-content class="padding">
-    <img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
-    <p>
-      {{chat.lastText}}
-    </p>
-  </ion-content>
-</ion-view>
+<link rel="stylesheet" href="css/g-account.css">
+<ion-header-bar class="bar-assertive bar bar-header">
+  <div class="buttons">
+    <button class="button button-icon icon ion-android-arrow-back" ng-click="goUP()"></button>
+  </div>
+  <h1 class="title" style="left: 55px; right: 55px;" ng-bind="title">
+  {title}
+  </h1>
+  <div class="buttons">
+    <button class="button button-icon icon ion-home" ng-click="goHome()"></button>
+  </div>
+</ion-header-bar>
+<div id="hebing" class="has-header">
+  <div class="row" id="rows" >
+    <div class="col col-11" ng-click="showCategorynine(x)" ng-repeat="x in list1">
+      <span>{{x}}</span>
+    </div>
+    <div class="col col-5">
+      <span class="icon ng-pristine ng-untouched ng-valid ng-not-empty ion-chevron-up" ng-click="shows()" ng-class="flag==true? &#39;ion-chevron-down&#39;:&#39;ion-chevron-up&#39;" ng-model="flag" style=""></span>
+    </div>
+  </div>
+  <div id="shows" ng-show="flag" class="ng-hide" style="">
+    <div class="row" ng-repeat="x in list2">
+      <div class="col col-25" ng-repeat="t in x">
+        <span ng-click="showCategorynine(t)">{{t}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<ion-content class="scroll-content ionic-scroll  has-header has-tabs">
+  <div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+    <!--下拉刷新-->
+    <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+
+    <div class="shop">
+      <div class="shops" ng-repeat="x in datas" ng-click="godetail(x.id)">
+        <img ng-src="{{x.img}}" alt="" >
+        <div class="div-center">
+          <p class="div-title">
+            {{x.tradename}}
+          </p>
+          <span class="price">
+           ¥{{x.price-x.codenum|number:1}}
+         </span>
+          <span class="last-price">
+           ¥{{x.price}}
+         </span>
+          <p class="special">已抢购<span>{{x.sales}}</span>件 </p>
+        </div>
+        <div class="div-right">
+          <div class="money-show">
+            <p class="money">¥<span>{{x.codenum}}</span></p>
+            <p>优惠券</p>
+          </div>
+          <p class="lingquan">领券购买</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ion-infinite-scroll on-infinite="loadMoreDate()" distance="1%">
+  </ion-infinite-scroll>
+</ion-content>
+

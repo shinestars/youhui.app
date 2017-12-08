@@ -5,8 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
-
+//,'ionic.native'
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','mydirective'])
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -69,7 +69,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-
 //精选
     .state('tab.jingxuan', {
       url: '/jingxuan',
@@ -80,16 +79,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-
-    // .state('tab.chat-detail', {
-    //   url: '/chats/:chatId',
-    //   views: {
-    //     'tab-chats': {
-    //       templateUrl: 'templates/chat-detail.html',
-    //       controller: 'ChatDetailCtrl'
-    //     }
-    //   }
-    // })
+    .state('tab.chats-detail', {
+      url: '/chats/:id',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/chat-detail.html',
+          controller: 'ChatDetailCtrl'
+        }
+      }
+    })
+    .state('tab.next-detail', {
+      url: '/nextdetail/:id',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/detail.html',
+          controller: 'NextDetailCtrl'
+        }
+      }
+    })
 //搜券
   .state('tab.account', {
     url: '/account',
@@ -100,7 +107,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   });
-
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
 

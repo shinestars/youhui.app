@@ -1,9 +1,17 @@
-<!--pinpai-->
+<link rel="stylesheet" href="css/z-tab-dash.css">
+<ion-header-bar class="bar-assertive bar bar-header">
+  <div class="title">品牌特惠</div>
+</ion-header-bar>
+<ion-content>
+  <!--下拉刷新-->
+  <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+  <div class="more" ng-click="godetail(x.id)" ng-repeat="x in datas">
+    <img ng-src="{{x.img}}" alt="">
+    <p>{{x.tradename}}</p>
+    <span class="money">券后 ¥{{x.price-x.codenum|number:1}}</span><span class="liang">销量{{x.sales}}</span>
+    <div class="dings">{{x.sellername}}</div>
+  </div>
+  <ion-infinite-scroll on-infinite="loadMoreDate()" distance="1%">
+  </ion-infinite-scroll>
+</ion-content>
 
-<ion-view >
-  <ion-content class="padding">
-    <p>
-      品牌
-    </p>
-  </ion-content>
-</ion-view>

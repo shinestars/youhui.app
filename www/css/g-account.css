@@ -5,28 +5,31 @@
   font-size: 18px;
   color:black;
 }
+#hebing{
+  position: absolute;
+  z-index:1110;
+  width: 100%;
+}
 #rows{
   height:50px;
   line-height:35px;
+  background-color:white;
 }
 #rows>div,#rows>div>a{
   vertical-align: top;
-
 }
 #shows{
   width: 100%;
-  position: fixed;
   background:rgba(0,0,0,.6);
   color: white;
-  z-index:99;
-  height:10000px;
+  height:1000px;
 }
 #shows>div{
   background-color: white;
 }
 
 #banner{
-  height:300px;
+  height:400px;
 }
 #bf>div,#bf>div>p{
   text-align: center;
@@ -80,6 +83,9 @@
 .div-title{
   line-height: 30px;
   font-size:18px;
+  height:90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .price{
   color: #ff405d;
