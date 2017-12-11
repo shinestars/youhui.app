@@ -1,0 +1,67 @@
+<ion-view hide-tabs="true">
+  <link rel="stylesheet" href="css/z-detail.css">
+  <div class="top-a" ng-click="goUP()">
+    <span class="ion-chevron-left" style="color: #ffffff"></span>
+  </div>
+  <div class="top-b" ng-click="goHome()">
+    <span class="ion-ios-home" style="color: #ffffff"></span>
+  </div>
+  <div class="dingwei">
+    <div class="down downa">
+      <a href="#/tab/account">
+        <span class="ion-ios-home"></span>
+        <span>首页</span>
+      </a>
+    </div><div class="down downb">
+    <a href="{{data[0].tradelink}}">
+      <span class="icon ion-ios-pricetag"></span>
+      <span>领券购买</span>
+    </a>
+  </div><div class="down downc">
+    <a href="{{data[0].tradelink}}">
+      <span class="icon ion-chatboxes"></span>
+      <span>淘口令购买</span>
+    </a>
+  </div>
+  </div>
+  <ion-content>
+    <div class="main" ng-repeat="x in data">
+
+      <img ng-src="{{x.img}}" alt="" class="xiong">
+      <div class="cool">
+        <div class="prices">
+          <span>券后价</span><span class="price">¥{{x.price-x.codenum|number:1}}</span>
+        </div>
+        <div class="news">
+          <span>¥{{x.price}}</span>
+          <br>
+          <span>已抢购{{x.sales}}件</span>
+        </div>
+        <p class="taidi">{{x.tradename}}</p>
+      </div>
+      <div class="none"></div>
+      <div class="like">
+        <span class="ion-ios-heart-outline" style="color: rgb(238,73,93)"></span>
+        <span class="cai">猜您喜欢</span>
+        <span class="ion-chevron-right cha"></span>
+        <span class="cha" ng-click="goHome()">查看更多</span>
+
+      </div>
+      <div class="more" ng-repeat="x in love" ng-click="todetail(x.id)">
+        <div >
+          <img ng-src="{{x.img}}" alt="">
+          <p class="title-word">{{x.tradename}}</p>
+          <span class="money">券后 ¥{{x.price-x.codenum|number:1}}</span><span class="liang">销量6264546</span>
+          <span class="ding">{{x.codenum}}元券</span>
+        </div>
+      </div>
+
+      <div class="bbtm">
+
+      </div>
+    </div>
+
+  </ion-content>
+
+</ion-view>
+

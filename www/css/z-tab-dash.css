@@ -1,0 +1,36 @@
+.more img {
+  width: 100%;
+  height:100%;
+}
+.more {
+  display: inline-block;
+  width: 46%;
+  font-size: 14px;
+  position: relative;
+  margin-left: 2.5%;
+  margin-bottom: 3%;
+}
+.more a {
+  color: rgb(134,134,134);
+}
+.more p {
+  /*width: 100%;*/
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+.more .money {
+  color: rgb(222,82,106);
+}
+.more .liang {
+  color: rgb(181,181,181);
+  font-size: 12px;
+  float: right;
+}
+.more .dings {
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: rgb(246,69,81);
+  color: #ffffff;
+}

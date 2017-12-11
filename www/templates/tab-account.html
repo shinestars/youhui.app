@@ -32,170 +32,114 @@
 
 
 <link rel="stylesheet" href="css/g-account.css">
-<ion-header-bar class="bar-assertive bar bar-header">
-  <div class="buttons">
-    <button class="button button-icon icon ion-navicon-round" ng-click="shows()"></button>
-  </div>
-  <h1 class="title" style="left: 55px; right: 55px;">
-    <input type="text" placeholder="输入关键词或商品标题搜索" id="users">
-  </h1>
-  <div class="buttons">
-    <button class="button button-icon icon ion-search"></button>
-  </div>
-</ion-header-bar>
-<ion-content class="scroll-content ionic-scroll  has-header has-tabs"><div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
-  <div class="row" id="rows" >
-    <div class="col col-10">
-      <span link-shop>全部</span>
-      <!--<a href="http://localhost:8100/#"></a>-->
+<ion-view>
+  <ion-header-bar class="bar-assertive bar bar-header">
+    <div class="buttons">
+      <button class="button button-icon icon ion-navicon-round" ng-click="shows()"></button>
     </div>
-    <div class="col col-11">
-      <span>女装</span>
-      <!--<a href="http://localhost:8100/#"></a>-->
+    <h1 class="title" style="left: 55px; right: 55px;">
+      <input type="text" placeholder="输入关键词或商品标题搜索" id="users" ng-model="users">
+    </h1>
+    <div class="buttons">
+      <button class="button button-icon icon ion-search" ng-click="searchs()"></button>
     </div>
-    <div class="col col-11">
-      <a href="http://localhost:8100/#">男装</a>
-    </div>
-    <div class="col col-11">
-      <a href="http://localhost:8100/#">鞋子</a>
-    </div>
-    <div class="col col-11">
-      <a href="http://localhost:8100/#">箱包</a>
-    </div>
-    <div class="col col-11">
-      <a href="http://localhost:8100/#">母婴</a>
-    </div>
-    <div class="col col-11">
-      <a href="http://localhost:8100/#">内衣</a>
-    </div>
-    <div class="col col-11">
-      <a href="http://localhost:8100/#">美妆</a>
-    </div>
-    <div class="col col-5">
-      <span class="icon ng-pristine ng-untouched ng-valid ng-not-empty ion-chevron-up" ng-click="shows()" ng-class="flag==true? &#39;ion-chevron-down&#39;:&#39;ion-chevron-up&#39;" ng-model="flag" style=""></span>
-    </div>
-  </div>
-  <div id="shows" ng-show="flag" class="ng-hide" style="">
-    <div class="row">
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">女装</a>
+  </ion-header-bar>
+  <div id="hebing" class="has-header">
+    <div class="row" id="rows" >
+      <div class="col col-11" ng-click="showCategory(x)" ng-repeat="x in list1">
+        <span>{{x}}</span>
       </div>
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">男装</a>
-      </div>
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">鞋子</a>
-      </div>
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">箱包</a>
+      <div class="col col-5">
+        <span class="icon ng-pristine ng-untouched ng-valid ng-not-empty ion-chevron-up" ng-click="shows()" ng-class="flag==true? &#39;ion-chevron-down&#39;:&#39;ion-chevron-up&#39;" ng-model="flag" style=""></span>
       </div>
     </div>
-    <div class="row">
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">母婴</a>
-      </div>
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">内衣</a>
-      </div>
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">美妆</a>
-      </div>
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">配饰</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">居家</a>
-      </div>
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">文体</a>
-      </div>
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">数码</a>
-      </div>
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">电器</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">美食</a>
-      </div>
-      <div class="col col-25">
-        <a href="http://localhost:8100/#">其他</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!--banner-->
-  <div id="banner">
-    <ion-slide-box does-continue="true" show-pager="false" auto-play="true">
-      <ion-slide>
-        <div class="box blue">
-          <img ng-src="{{data[9].img}}" alt="">
+    <div id="shows" ng-show="flag" class="ng-hide" style="">
+      <div class="row" ng-repeat="x in list2">
+        <div class="col col-25" ng-repeat="t in x">
+          <span ng-click="showCategory(t)">{{t}}</span>
         </div>
-      </ion-slide>
-      <ion-slide>
-        <div class="box blue">
-          <img ng-src="{{data[9].img}}" alt="">
-        </div>
-      </ion-slide>
-    </ion-slide-box>
+      </div>
+    </div>
   </div>
-  <!--9.9-->
-  <div class="row" id="bf">
-    <div class="col col-25">
-      <div style="background-color:#fbc426;">
-        <img src="img/bf1.png" alt="">
-      </div>
-      <p>9.9包邮</p>
-    </div>
-    <div class="col col-25">
-      <div style="background-color:#3edcb4;">
-        <img src="img/bf2.png" alt="">
-      </div>
-      <p>20元封顶</p>
-    </div>
-    <div class="col col-25">
-      <div style="background-color:#f38648;">
-        <img src="img/bf3.png" alt="">
-      </div>
-      <p>今日疯抢榜</p>
-    </div>
-    <div class="col col-25" ng-click="today()">
-      <div style="background-color:#5fd0ff;">
-        <img src="img/bf4.png" alt="">
-      </div>
-      <p>仅限今日</p>
-    </div>
 
-  </div>
-  <div class="shop">
-    <a class="shops" ng-repeat="x in data" ng-href="{{x.tradelink}}">
-      <img ng-src="{{x.img}}" alt="" >
-      <div class="div-center">
-        <p class="div-title">
-          {{x.tradename}}
-        </p>
-        <span class="price">
+  <ion-content class="scroll-content ionic-scroll  has-header has-tabs">
+    <div class="scroll" style="transform: translate3d(0px, 0px, 0px) scale(1);">
+      <!--下拉刷新-->
+      <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+      <!--banner-->
+      <div id="banner">
+        <ion-slide-box does-continue="true" show-pager="false" auto-play="true">
+          <ion-slide>
+            <div class="box blue">
+              <img ng-src="{{data[9].img}}" alt="">
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="box blue">
+              <img ng-src="{{data[9].img}}" alt="" >
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="box blue">
+              <img ng-src="{{data[9].img}}" alt="" >
+            </div>
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+      <!--9.9-->
+      <div class="row" id="bf">
+        <div class="col col-25" ng-click="godetail(9)">
+          <div style="background-color:#fbc426;">
+            <img src="img/bf1.png" alt="">
+          </div>
+          <p>9.9包邮</p>
+        </div>
+        <div class="col col-25" ng-click="godetail(20)">
+          <div style="background-color:#3edcb4;">
+            <img src="img/bf2.png" alt="">
+          </div>
+          <p>20元封顶</p>
+        </div>
+        <div class="col col-25" ng-click="godetail(1)">
+          <div style="background-color:#f38648;">
+            <img src="img/bf3.png" alt="">
+          </div>
+          <p>今日疯抢榜</p>
+        </div>
+        <div class="col col-25" ng-click="godetail(0)">
+          <div style="background-color:#5fd0ff;">
+            <img src="img/bf4.png" alt="">
+          </div>
+          <p>仅限今日</p>
+        </div>
+
+      </div>
+      <div class="shop">
+        <div class="shops" ng-repeat="x in data" ng-click="next(x.id)">
+          <img ng-src="{{x.img}}" alt="" >
+          <div class="div-center">
+            <p class="div-title">
+              {{x.tradename}}
+            </p>
+            <span class="price">
            ¥{{x.price-x.codenum|number:1}}
          </span>
-        <span class="last-price">
+            <span class="last-price">
            ¥{{x.price}}
          </span>
-        <!--<p class="special">新品特惠</p>-->
-        <p class="special">已抢购<span>{{x.sales}}</span>件 </p>
-      </div>
-      <div class="div-right">
-        <div class="money-show">
-          <p class="money">¥<span>{{x.codenum}}</span></p>
-          <p>优惠券</p>
+            <p class="special">已抢购<span>{{x.sales}}</span>件 </p>
+          </div>
+          <div class="div-right">
+            <div class="money-show">
+              <p class="money">¥<span>{{x.codenum}}</span></p>
+              <p>优惠券</p>
+            </div>
+            <p class="lingquan">领券购买</p>
+          </div>
         </div>
-        <p class="lingquan">领券购买</p>
       </div>
-    </a>
-  </div>
-</div>
-</ion-content>
+    </div>
+    <ion-infinite-scroll on-infinite="loadMoreDate()" distance="1%">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>
