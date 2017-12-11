@@ -36,9 +36,13 @@ margin-bottom: -71px;
   text-align: center;
   overflow: hidden;
 }
+.z-part1  .z-p1pho{
+  text-align: center;
+}
 .z-part1  .z-p1pho >img{
   margin-top:16px;
   height:38px;
+
 }
 .z-part1 .z-p1yugao{
   display:inline-block;
@@ -88,7 +92,9 @@ margin-bottom: -71px;
   position: relative;
 
 }
-
+.z-p1-swiper1 .swiper-slide  p{
+  text-align: center;
+}
 .sanjiaos{
   content:"";
   height: 0;
