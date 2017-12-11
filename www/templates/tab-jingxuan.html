@@ -94,12 +94,16 @@
               <img ng-src="{{data.img}}" style="height: 300px;">
               <div>
                <h5>{{data.tradesort}}</h5>
-                <p>秒杀价:¥{{data.price}}</p>
+                <p>秒杀价:<span> ¥{{data.price}}</span></p>
                 <div>
                   <span>领券减</span>
-                  <span class="z-lingquan">{{}}</span>
-                  <span>销量</span>
-                  <span class="z-xiaoliang">{{}}</span>
+                  <span class="z-lingquan">{{data.codenum}}</span>
+                  <div class="z-xlf">
+                    <span>销量</span>
+                    <span class="z-xiaoliang">{{data.sales}}</span>
+                  </div>
+
+                  <div class="z-lingqu"><a href="#">立即秒杀 > </a></div>
                 </div>
 
               </div>

@@ -171,7 +171,7 @@ margin-bottom: -71px;
 
   text-align: center;
   font-size: 18px;
-  background: red;
+  background: #fff;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,15 +192,25 @@ margin-bottom: -71px;
   right:0;
   color: #525252;
   text-align: left;
-  background-color: red;
+  /*background-color: red;*/
   left:6px;
 }
 .z-p1-swiper2 .swiper-slide >div h5 {
-  font-size:21px;
+  font-size:20px;
   color: #525252;
   font-weight: 400;
 }
-.z-part2{
+.z-p1-swiper2 .swiper-slide .z-xlf{
+  float: right;
+  margin-right: 20px;
+}
+.z-p1-swiper2 .swiper-slide >div p span{
+  color:#b14b30;
+ }
+.z-p1-swiper2 .swiper-slide >div .z-lingqu a{
+  color: #ce6208;
+}
+ .z-part2{
   width:95%;
   margin:0 auto;
   margin-top: 40px;

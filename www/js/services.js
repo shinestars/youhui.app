@@ -52,7 +52,7 @@ angular.module('starter.services', [])
     return {
       //获得所有数据
       getdata:function (size) {
-        return $http.get("http://localhost/data/getdata.php?size="+size);
+        return $http.get("data/getdata.php?size="+size);
 
       },
       //获得仅限今日
