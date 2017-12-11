@@ -51,7 +51,8 @@ angular.module('starter.services', [])
   .factory('ser',function ($http) {
     return {
       getdata:function (size) {
-        return $http.get("data/getdata.php?size="+size);
+        return $http.get("http://localhost/data/getdata.php?size="+size);
+
       },
       gettoday:function (size) {
         return $http.get("data/gettoday.php?size="+size);

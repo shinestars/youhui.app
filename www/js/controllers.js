@@ -26,7 +26,22 @@ angular.module('starter.controllers', [])
   .controller('PinpaiCtrl', function($scope) {})
 
   //精选
-  .controller('JingxuanCtrl', function($scope) {})
+  .controller('JingxuanCtrl', function($http,$scope) {
+    $scope.num=5;
+    $http({
+      method:'GET',
+      url:'http://localhost/data/getdata.php?size='+$scope.num
+    }).then(function successCallback(response) {
+        console.log(response.data);
+        $scope.data= response.data;
+    })
+
+
+
+
+
+
+  })
 
   //搜券
 .controller('AccountCtrl', function($scope,ser) {

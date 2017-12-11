@@ -1,9 +1,261 @@
 <!--jingxuan-->
 
-<ion-view >
-  <ion-content class="padding">
-    <p>
-      精选
-    </p>
+<link rel="stylesheet" href="../css/zh.css">
+<ion-view>
+  <div class="bar bar-header bar-assertive" id="z_head">
+    <h1 class="title" id="z_hday">每日精选</h1>
+  </div>
+
+
+  <ion-content id="z_body">
+  <div class="z-head">
+    <ul>
+      <li> </li>
+    </ul>
+  </div>
+    <div class="z-banner">
+      <img src="./img/imgs/ban.jpg" alt="">
+    </div>
+    <div class="z-part1">
+      <div class="z-p1pho">
+        <img src="./img/imgs/p11.png" alt="">
+      </div>
+      <span class="z-p1yugao">预告提前看 优惠不错过</span>
+      <!-- Swiper -->
+      <div class="z-p1-swiper1">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide z-time1">
+              <span class="sanjiao"></span>
+              <span>00:00</span>
+              <p></p>
+            </div>
+            <div class="swiper-slide  z-time1">
+              <span class="sanjiao"></span>
+              <span>08:00</span><br>
+              <p></p>
+            </div>
+            <div class="swiper-slide  z-time1">
+              <span class="sanjiao"></span>
+              <span>10:00</span><br>
+              <p></p>
+            </div>
+            <div class="swiper-slide  z-time1">
+              <span class="sanjiao"></span>
+              <span>13:00</span><br>
+              <p></p>
+            </div>
+            <div class="swiper-slide  z-time1">
+              <span class="sanjiao"></span>
+              <span>15:00</span><br>
+              <p></p>
+            </div>
+            <div class="swiper-slide  z-time1">
+              <span class="sanjiao"></span>
+              <span>17:00</span><br>
+              <p></p>
+            </div>
+            <div class="swiper-slide  z-time1">
+              <span class="sanjiao"></span>
+              <span>19:00</span ><br>
+              <p></p>
+            </div>
+            <div class="swiper-slide  z-time1">
+              <span class="sanjiao"></span>
+              <span>20:00</span><br>
+              <p></p>
+            </div>
+            <div class="swiper-slide  z-time1">
+              <span class="sanjiao"></span>
+              <span>21:00</span><br>
+              <p></p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="z-countdown">
+        距离本场结束
+        <span class="jieshu1">0</span>
+        <span class="dian1">:</span>
+        <span class="jieshu2">0</span>
+        <span class="dian2">:</span>
+        <span class="jieshu3">0</span>
+      </div>
+
+
+      <div class="z-p1-swiper2">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+
+
+            <div class="swiper-slide" ng-repeat="data in data">
+              <img ng-src="{{data.img}}" style="height: 300px;">
+              <div>
+               <h5>{{data.tradesort}}</h5>
+                <p>秒杀价:¥{{data.price}}</p>
+                <div>
+                  <span>领券减</span>
+                  <span class="z-lingquan">{{}}</span>
+                  <span>销量</span>
+                  <span class="z-xiaoliang">{{}}</span>
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+      <div class="z-part2">
+        <h3><span>每日必抢</span></h3>
+        <p>每日精选尖货 , 优惠有限哦</p>
+        <div class="zp2-biqiang">
+          <ul>
+            <li >图片</li>
+            <li >图片</li>
+          </ul>
+        </div>
+      </div>
+    <div class="z-part3 z-same">
+     <h3><span>女神穿搭</span></h3>
+      <p>你与女神的距离或许只是因为错过了它</p>
+      <div class="zp-sames">
+        <ul>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+        </ul>
+      </div>
+    </div>
+    <div class="z-part4 z-same">
+      <h3><span>男神新装</span></h3>
+      <p>千篇一律 不如特立独行</p>
+      <div class="zp-sames">
+        <ul>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+        </ul>
+      </div>
+    </div>
+    <div class="z-part5 z-same">
+      <h3><span>精品美妆</span></h3>
+      <p>解锁美丽新姿势</p>
+      <div class="zp-sames">
+        <ul>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+        </ul>
+      </div>
+    </div>
+    <div class="z-part6 z-same">
+      <h3><span>舒适内衣</span></h3>
+      <p>碰触的是柔软 穿着的是舒适</p>
+      <div class="zp-sames">
+        <ul>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+        </ul>
+      </div>
+    </div>
+    <div class="z-part7 z-same">
+      <h3><span>鞋包配饰</span></h3>
+      <p>看不见的心机 看得见的精致</p>
+      <div class="zp-sames">
+        <ul>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+        </ul>
+      </div>
+    </div>
+    <div class="z-part8 z-same">
+      <h3><span>潮妈必选</span></h3>
+      <p>百万宝妈首选,爱Ta就给Ta最好的</p>
+      <div class="zp-sames">
+        <ul>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+        </ul>
+      </div>
+    </div>
+    <div class="z-part9 z-same">
+      <h3><span>舌尖美食</span></h3>
+      <p>生活的态度 , 是追剧解馋必备</p>
+      <div class="zp-sames">
+        <ul>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+        </ul>
+      </div>
+    </div>
+    <div class="z-part10 z-same">
+      <h3><span>日用百货</span></h3>
+      <p>小编力荐居家好货 , 让生活方便不止一点</p>
+      <div class="zp-sames">
+        <ul>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+        </ul>
+      </div>
+    </div>
+    <div class="z-part11 z-same">
+      <h3><span>数码家电</span></h3>
+      <p>好物良心鉴 爆款大推荐</p>
+      <div class="zp-sames">
+        <ul>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+          <li >图片</li>
+        </ul>
+      </div>
+    </div>
+    <div class="z-part12">
+      <img src="https://img.alicdn.com/tfs/TB19a5YfN6I8KJjy0FgXXXXzVXa-520-280.jpg_q90_.webp" alt="">
+
+    </div>
   </ion-content>
+
+    <div class="z-huojian"></div>
+
+
 </ion-view>
+
