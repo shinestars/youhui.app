@@ -30,7 +30,7 @@ angular.module('starter.controllers', [
     $scope.num=5;
     $http({
       method:'GET',
-      url:'http://localhost/data/getdata.php?size='+$scope.num
+      url:'data/getdata.php?size='+$scope.num
     }).then(function successCallback(response) {
         console.log(response.data);
         $scope.data= response.data;
