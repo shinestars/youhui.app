@@ -26,7 +26,6 @@ app.controller('AccountCtrl', function($scope,ser,$state,$rootScope,$cookieStore
   };
   $scope.get=function () {
     ser.getdata($cookieStore.get('data')).success(function (data) {
-      console.log(data);
       $scope.data=data;
       $cookieStore.put('data',$cookieStore.get('data'));
     });
@@ -106,4 +105,4 @@ app.controller('AccountCtrl', function($scope,ser,$state,$rootScope,$cookieStore
       $scope.$broadcast('scroll.infiniteScrollComplete');
     });
   };
-})
+});

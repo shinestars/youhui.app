@@ -53,7 +53,6 @@ angular.module('starter.services', [])
       //获得所有数据
       getdata:function (size) {
         return $http.get("data/getdata.php?size="+size);
-
       },
       //获得仅限今日
       gettoday:function (size) {

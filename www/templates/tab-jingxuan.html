@@ -1,8 +1,8 @@
 <!--jingxuan-->
+<!--<link rel="stylesheet" href="css/swiper-3.4.2.min.css">-->
 
-<link rel="stylesheet" href="css/zh.css">
-<script src="js/zh.js"></script>
 <ion-view>
+  <link rel="stylesheet" href="css/zh.css">
   <div class="bar bar-header bar-assertive" id="z_head">
     <h1 class="title" id="z_hday">每日精选</h1>
   </div>
@@ -23,20 +23,25 @@
       </div>
       <span class="z-p1yugao">预告提前看 优惠不错过</span>
       <!-- Swiper -->
+      <style>
+        #text>div{
+          width: 100px;
+        }
+      </style>
       <div class="z-p1-swiper1">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide z-time1">
+        <div class="swiper-container" >
+          <div class="swiper-wrapper" id="text">
+            <div class="swiper-slide z-time1" >
               <span class="sanjiao"></span>
               <span>00:00</span>
               <p></p>
             </div>
-            <div class="swiper-slide  z-time1">
+            <div class="swiper-slide  z-time1" >
               <span class="sanjiao"></span>
               <span>08:00</span><br>
               <p></p>
             </div>
-            <div class="swiper-slide  z-time1">
+            <div class="swiper-slide  z-time1" >
               <span class="sanjiao"></span>
               <span>10:00</span><br>
               <p></p>
@@ -260,7 +265,7 @@
   </ion-content>
 
     <div class="z-huojian"></div>
-
-
+  <!--<script src="js/swiper-3.4.2.min.js"></script>-->
+  <script src="../js/zh.js"></script>
 </ion-view>
 
